@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adaptive NeuroLearning</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<section id="p1" class="page active-page">
+
+<div class="hero">
+
+<h1>Adaptive NeuroLearning</h1>
+
+<p>Personalized learning tailored to your mind</p>
+
+<button class="btn primary" onclick="nav(2)">Start Journey</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section id="p2" class="page">
+
+<h2>Select Your Learning Profile</h2>
+
+<div class="mode-container">
+
+<div class="mode-card" onclick="setMode('adhd')">
+
+<h3>ADHD Mode</h3>
+
+<p>Focus tools and chunked learning</p>
+
+</div>
+
+<div class="mode-card" onclick="setMode('dyslexia')">
+
+<h3>Dyslexia Mode</h3>
+
+<p>Easy fonts and better readability</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section id="p3" class="page">
+
+<div id="focus-ruler"></div>
+
+<h2>Learning Lab</h2>
+
+<textarea id="textInput" placeholder="Paste academic paragraph here..."></textarea>
+
+<div class="btn-group">
+
+<button class="btn blue" onclick="processText()">Simplify & Generate Quiz</button>
+
+<button class="btn green" onclick="speakText()">Text to Speech</button>
+
+<button class="btn purple" onclick="showVisual()">Visual Learning</button>
+
+<button class="btn orange" onclick="generateDiagram()">AI Concept Diagram</button>
+
+</div>
+
+<div class="dashboard">
+
+<h3>Learning Dashboard</h3>
+
+<p>Focus Time: <span id="focusTime">0 sec</span></p>
+
+<p>Quiz Progress: <span id="progress">0%</span></p>
+
+<div class="progressBar">
+
+<div id="progressFill"></div>
+
+</div>
+
+</div>
+
+<div id="output"></div>
+
+<canvas id="diagramCanvas"></canvas>
+
+<button class="btn dark" onclick="startQuiz()">Proceed to Quiz</button>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section id="p4" class="page">
+
+<h2>Knowledge Check</h2>
+
+<div id="quizBox">
+
+<p id="question"></p>
+
+<div id="options"></div>
+
+</div>
+
+<div id="result" class="hidden">
+
+<h2>Your Score: <span id="score"></span></h2>
+
+<button class="btn primary" onclick="location.reload()">Restart</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
